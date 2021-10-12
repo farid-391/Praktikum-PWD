@@ -3,14 +3,13 @@ $lokasi_file = $_FILES['fupload']['tmp_name'];
 $nama_file = $_FILES['fupload']['name'];
 $deskripsi = $_POST['deskripsi'];
 $direktori = "c:/xampp/htdocs/praktikumpwd/uploadfile/hasil_upload/$nama_file";
-if (move_uploaded_file($lokasi_file, $direktori))
-{
-echo "Nama File: <b>$nama_file</b> berhasil di upload <br>";
-echo "Deskripsi File :<br>$deskripsi";
+
+if (move_uploaded_file($lokasi_file, $direktori)){
+    echo "Nama File: <b>$nama_file</b> berhasil di upload <br>";
+    echo "Deskripsi File :<br>$deskripsi";
+}else {
+    echo "File gagal diupload";
 }
-else {
- echo "File gagal diupload";
-}
-echo "<br><br><a href='index.php'>Kembali</a><br/>";
-echo "<br><br><a href='download.php'>Download File</a><br/>";
+    echo "<br><br><a href='index.php'>Kembali</a><br/>";
+    echo "<br><br><a href='download.php'>Download File</a><br/>";
 ?>
