@@ -2,6 +2,15 @@
  <head>
  <style>
  .error {color: #FF0000;}
+ .table {
+    border : 1pt solid black;
+    border-spacing: 0px;
+ }
+ .row td{
+    border : 0.8pt solid black;
+    padding: 4px;
+ }
+ 
 </style>
  </head>
  
@@ -102,30 +111,25 @@
  </table>
  </form>
  
-<table style="border: 1pt">
-    <tr>
+<table class="table">
+    <tr class="row">
         <td>Nama</td>
-        <td>:</td>
         <td> <?php echo $nama;?> </td>
     </tr>
-    <tr>
+    <tr class="row">
         <td>Email</td>
-        <td>:</td>
         <td> <?php echo $email;?></td>
     </tr>
-    <tr>
+    <tr class="row">
         <td>Website</td>
-        <td>:</td>
         <td><?php echo $website;?></td>
     </tr>
-    <tr>
+    <tr class="row">
         <td>Gender</td>
-        <td>:</td>
         <td><?php echo $gender;?></td>
     </tr>
-    <tr>
+    <tr class="row">
         <td>Komentar</td>
-        <td>:</td>
         <td><?php echo $comment;?></td>
     </tr>
 </table>
