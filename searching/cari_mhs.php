@@ -8,10 +8,10 @@ include "../session/koneksi.php";
 <input type="submit" value="Cari">
 </form>
 <?php 
-if(isset($_GET['cari'])){
-$cari = $_GET['cari'];
-echo "<b>Hasil pencarian : ".$cari."</b>";
-}
+    if(isset($_GET['cari'])){
+    $cari = $_GET['cari'];
+    echo "<b>Hasil pencarian : ".$cari."</b>";
+    }
 ?>
 <table border="1">
 <tr>
@@ -19,13 +19,13 @@ echo "<b>Hasil pencarian : ".$cari."</b>";
 <th>Nama</th>
 </tr>
 <?php 
-if(isset($_GET['cari'])){
-$cari = $_GET['cari'];
-$sql="select * from mahasiswa where nama like'%".$cari."%'";
-$tampil = mysqli_query($con,$sql);
-}else{
-$sql="select * from mahasiswa";
-$tampil = mysqli_query($con,$sql);
+    if(isset($_GET['cari'])){
+    $cari = $_GET['cari'];
+    $sql="select * from mahasiswa where nama like'%".$cari."%'";
+    $tampil = mysqli_query($con,$sql);
+    }else{
+    $sql="select * from mahasiswa";
+    $tampil = mysqli_query($con,$sql);
 }
 $no = 1;
 while($r = mysqli_fetch_array($tampil)){
