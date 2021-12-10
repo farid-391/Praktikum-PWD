@@ -2,7 +2,7 @@
 // Create database connection using config file
 include_once("koneksi.php");
 // Fetch all users data from database
-$result = mysqli_query($con, "SELECT * FROM mahasiswa ");
+$result = mysqli_query($con, 'SELECT * FROM mahasiswa');
 ?>
 <html>
 <head> 
@@ -10,10 +10,13 @@ $result = mysqli_query($con, "SELECT * FROM mahasiswa ");
 </head>
 <body>
 <a href="tambah.php">Tambah Data Baru</a><br/><br/>
-    <table width='80%' border=1>
+<form action="cetak.php" method="POST">
+    <input type="submit" value="Cetak"/>
+</form>
+<table width='80%' border=1>
     <tr>
     <th>Nim</th> <th>Nama</th> <th>Gender</th> <th>Alamat</th> 
-    <th>tgl lahir</th> <th>Update</th>
+    <th>Tgl Lahir</th><th>Update</th>
     </tr>
 <?php 
 while($user_data = mysqli_fetch_array($result)) { 
