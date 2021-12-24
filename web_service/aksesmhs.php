@@ -5,7 +5,6 @@ curl_setopt($client, CURLOPT_RETURNTRANSFER, 1);
 $response = curl_exec($client);
 $result = json_decode($response);
 ?>
-
 <h3>Form Pencarian Dengan PHP MAHASISWA</h3>
 <form action="" method="get">
 <label>Cari :</label>
@@ -24,7 +23,6 @@ $result = json_decode($response);
         foreach ($result as $data) {
             if($data->nim===$cari){
                 echo "<p>";
-                echo "NIM : " . $data->nim . "<br />";
                 echo "NIM : " . $data->nim . "<br />";
                 echo "Nama : " . $data->nama . "<br />";
                 echo "jenis kel : " . $data->jkel . "<br />";
